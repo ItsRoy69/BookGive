@@ -15,7 +15,7 @@
         "network": "goerli"
     }
 - Copy the metamask address and put on the "accountAddress" of store like this 
-  > "accountAddress": "0x094AD076229E5B87B54Fa304472FAaCeAee42997"
+  > "accountAddress": "0x094AD076229E5B87B54F......."
 
 - Create an app in alchemy copy api key and https address and paste in store data like:
   > "providerUrl": "https://eth-goerli.g.alchemy.com/v2/95",
@@ -23,7 +23,7 @@
 
 - Go o https://goerlifaucet.com/ and paste the metamask address to get test eth
 - Connect the data part of the store to config of Factory Deployer
-- Search "Multiplexer event logger" and drag that to the dashboard and connect with events of Factory deployer
+- Search "Multiplexed event logger" and drag that to the dashboard and connect with events of Factory deployer
 - Search "Logger ( with message )" and drag to dashboard and connect the data part of it to the error part of Factory deployer
 - Set message of "Logger ( with message )" as "Factory compilation error"
 - Connect the "log" button with "confirmation" of Factory deployer
@@ -43,3 +43,11 @@
 - Thus, go to metamask wallet, click on account details and check the private key which shouldn't be made public and paste the private key in "config"-s "privateKey": "17840d76bb1887a.............."
 - Click on play icon on top of screen
 - Since we used "multiplexed event logger" to check what is being passed thus we disable this node after checking the data that is being passed
+- Check the transaction copy the transaction hash "0x3a272cc0f37fd6bf792a1001114cef..................." and paste on https://goerli.etherscan.io/ and if it says success then it is succesfully transacted
+- Click on the activity on top of screen and click on edit
+- Double click on the "compile and deploy factory"
+- Search "contract deployment waiter" and drag to the dasshboard
+- Connect "confirmation" of "contract deployment waiter" to "confirmation" of "factory deployer"
+- Give number required as 2 in "contract deployment waiter"
+- Delete thne connection wire of "factory deployer" like this 
+
