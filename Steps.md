@@ -54,4 +54,5 @@
 ![2022-09-12 (8)](https://user-images.githubusercontent.com/78967360/189586022-16669da2-32ba-4d44-afb0-33eacf60ed5b.png)
 
 - Rename "confirmation" to "contract address" and datatype to "string" and connect it with contract address of "contract deployment waiter"
+![2022-09-12 (9)](https://user-images.githubusercontent.com/78967360/189588799-b418af0f-9adf-4234-ac61-2eadf1f2721f.png)
 
