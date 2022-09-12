@@ -50,4 +50,6 @@
 - Connect "confirmation" of "contract deployment waiter" to "confirmation" of "factory deployer"
 - Give number required as 2 in "contract deployment waiter"
 - Delete thne connection wire of "factory deployer" like this 
+![2022-09-12 (7)](https://user-images.githubusercontent.com/78967360/189586008-f3a16603-1b4d-49bf-a7d4-2be8441efc00.png)
+![2022-09-12 (8)](https://user-images.githubusercontent.com/78967360/189586022-16669da2-32ba-4d44-afb0-33eacf60ed5b.png)
 
