@@ -5,7 +5,7 @@
 - Search "uniswap deployer" -> Drag the Factory deployer and Router deployer
 - Connect Router compiler (compiler router contract) with Router deployer (router contract)
 - Connect Factory Compiler (compound factory contract) with Factory deployer (factory contract) 
-- Connecxt start with Factory Compiler
+- Connect start with Factory Compiler
 - Search "store" -> Drag the Store 
 - Copy the datas from Factory deployer and paste inside the data of store 
   > {
@@ -33,7 +33,7 @@
   -
   > Hold shift and click on "Router compiler", then click on " Router deployer" and right click group nodes
   > Rename the instance to "compile and deploy router"
-- Rename the instance of the store to "config"
+- Rename the store to "config"
 - Connect the "start" to the "read" of config
 - Click on play icon on top of screen
 - As we hover on top of "compile and deploy factory" we see error,  thus double click,
@@ -55,4 +55,37 @@
 
 - Rename "confirmation" to "contract address" and datatype to "string" and connect it with contract address of "contract deployment waiter"
 ![2022-09-12 (9)](https://user-images.githubusercontent.com/78967360/189588799-b418af0f-9adf-4234-ac61-2eadf1f2721f.png)
-
+ - Delete  the "log"
+ - Double click on "compile and deploy router"
+ - Search "init code pair hash requester" and drag to the dashboard 
+ - Connect "init_hash" of "init code pair hash requester" to "init_hash" of "router compiler"
+ - Click on "+" to create another node and name it "factory address" and datatype to "string" and connect it with "factory_address" of "init code pair hash requester"
+ - Click on "+" to create another node and name it "factory ABI" and connect it with "factory ABI" of "init code pair hash requester"
+  - Click on "+" to create another node and name it "config"
+  - Search "item getter in key" and drag to the dashboard and connect dics of it with "config"
+  - Give key of "item getter in dictionary" as "providerUrl"
+  - Rename "item getter" to "get providerUrl"
+  - Connect "value" of "item getter" to "providerUrl" of "init code pair hash requester"
+  - Connect "factory address" to "factory address" of "router deployer"
+  - Connect "config" to "config" of "router deployer"
+  - Search "weth addresses" and drag to dashboard
+  - Duplicate "get providerUrl" and put it beside "weth addresses"
+  - Connect "dict" of "get providerUrl copy" to "config"
+  - Rename "providerUrl" of "get providerUrl copy" to "network"
+  - Rename "get providerUrl copy" to "get network"
+  - Connect "network" of "get network" to "network" of "weth addresses"
+  - Connect "weth address" of "weth addresses" to "weth address" of "router deployer"
+  - Search "contract deployment waiter" and drag to the dashboard
+  - Connect "confirmation" of "contract deployment waiter" to "confirmation" of "router deployer"
+  - Set number required as 2 in "contract deployment waiter"
+  - Click on "+" to create another node and name it "router address" and datatype to "string"
+  - Click on "+" to create another node and name it "router ABI"
+  - Click on "+" to create another node and name it "events"
+  - Click on "+" to create another node and name it "error"
+  - Connect the "error" to "error" of "router deployer" and "error" of "router deployer"
+  - Duplicate "get network" and name it "get ABI key"
+  - Connect "compiled Router contract" of "router compiler" to "dict" of "get ABI key"
+  - Rename key of "get ABI key" to "abi"
+  - Connect "value" of "get ABI key" to "router ABI"
+  - Connect "router address" to "contract address" of "contract deployment waiter"
+  - Connect "events" to "events" of "router deployer"
