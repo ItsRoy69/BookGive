@@ -70,6 +70,9 @@
   - Connect "config" to "config" of "router deployer"
   - Search "weth addresses" and drag to dashboard
   - Duplicate "get providerUrl" and put it beside "weth addresses"
+
+![2022-09-14](https://user-images.githubusercontent.com/78967360/190212154-5464a868-79a3-4932-a1d4-daa55d75a054.png)
+
   - Connect "dict" of "get providerUrl copy" to "config"
   - Rename "providerUrl" of "get providerUrl copy" to "network"
   - Rename "get providerUrl copy" to "get network"
