@@ -92,3 +92,23 @@
   - Connect "value" of "get ABI key" to "router ABI"
   - Connect "router address" to "contract address" of "contract deployment waiter"
   - Connect "events" to "events" of "router deployer"
+  -  Back
+  - Rename "contract address" of "compile and deploy factory" to "factory address"
+  - Connect "factory address" of "compile and deploy factory" to "factory address" of "compile and deploy router"
+  - Connect "data" of config to "config" of "compile and deploy router"
+  - Double click on "compile and deploy factory"
+  - Search "item getter dictionary" and drag to the dashboard
+  - Connect "compiled Factory contract" of "factory compiler" to "dict" of "item getter dictionary"
+  - Give key of "item getter dictionary" as "abi"
+  - Create a new output and name it "abi"
+  - Connect "value" of "item getter dictionary" to abi 
+  - Back
+  - Connect "abi" of "compile and deploy factory" to "factory ABI" of "compile and deploy router"
+  - Duplicate "multiplexed event logger"
+  - Duplicate "logger (with message)"
+  - Connect "events" of "compile and deploy router" to "events" of "multiplexed event logger (copy)"
+  - Connect "error" of "compile and deploy router" to "data" of "logger (with message)(copy)"
+  - Set message of "logger (with message)(copy)" as "Router compilation or deployment error"
+  - Search "logger" and drag to the dashboard
+  - Connect "logger" with "router address" of "compile and deploy router"
+  - Play
